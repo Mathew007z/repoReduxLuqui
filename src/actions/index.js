@@ -1,9 +1,14 @@
 
-// ACTION NECESITA LOS NOMBRES DE TYPES PARA ENTENDER COMO SE LLAMARA LA ACCION A EJECUTAR
-// ACTION = FUNCTION
-import { INCREMENT_COUNT, DECREMENT_COUNT, RESET_COUNT } from "../types"; 
 
-// funciones / acciones
-export const incrementCount = () => ({type:INCREMENT_COUNT});
-export const decrementCount = () => ({type:DECREMENT_COUNT});
-export const resetCount = () => ({type:RESET_COUNT});
+// en este archivo van a ir las accion/ funciones, que vamos a ejecutar en el componente Counter.
+// y dichas acciones o funciones van a necesitar el nombre proveniente de TYPES.
+import { 
+    INCREMENT, 
+    DECREMENT, 
+    RESET 
+} from "../types";
+
+// acciones / funciones con su TIPO correspondiente.
+export const incrementCount = () => ({type:INCREMENT});
+export const decrementCount = () => ({type:DECREMENT});
+export const reset = () => ({type:RESET});

@@ -1,15 +1,16 @@
-// este index.js en la carpeta store, va a ser el encargado de almacenar TODO nuestro estado global.
+// provider que une todo. 
+// el archivo mas importante. => App. 
 
-// provider.
 
-// creamos el estado global de redux
+// importamos la funcion que crea el estado global.
 import { createStore } from "redux";
-
-// importamos el que combina todos los reducers
 import rootReducer from "../reducers";
 
-const store = createStore(rootReducer);
+// crear el estado
+
+export const store = createStore(rootReducer)
 
 
 
-export default store;
+
+

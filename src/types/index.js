@@ -1,11 +1,7 @@
+// escribir el TIPO de accion que queremos ejecutar.
 
 
-
-// types el encargado de enviar por NOMBRE el tipo de accion que queremos ejecutar.
-
-// counter names
-export const INCREMENT_COUNT = 'INCRMENT_COUNT';
-export const DECREMENT_COUNT = 'DECREMENT_COUNT';
-export const RESET_COUNT = 'RESET_COUNT';
-
-
+// el nombre de estas acciones SIEMPRE tienen que ser UPPERCASE.
+export const INCREMENT = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';
+export const RESET = 'RESET';

@@ -1,15 +1,15 @@
-import Counter from './components/counter'
+
 import './App.css'
-import store from './store'
-import {Provider} from 'react-redux';
-
-
+import Counter from './components/Counter';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 function App() {
 
   return (
+    //configuramos el envio de provider nativo de react redux, hacia los hijos.
     <Provider store={store}>
-      <Counter/>
+        <Counter/>
     </Provider>
   )
 }

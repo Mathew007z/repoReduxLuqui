@@ -1,26 +1,28 @@
-import React from 'react'
-// redux tiene algo para ejecutar las funciones o acciones que se llama dispatch.
-// el dispatch => es un disparador, que lo que hace es disparar justamente esas acciones que indicamos.
+
+// importamos las acciones que luego utilizaremos como disparador el dispatch para ejecutarlas.
+import { incrementCount, decrementCount, reset } from '../actions/index';
+// necesitamos un dispatch
 import { useDispatch, useSelector } from 'react-redux';
-// tambien necesitamos importar un selector, que el selector, agarra el estado del reducer y lo trae al componente.
-import { incrementCount, decrementCount, resetCount } from '../actions';
-
-
+// obtener el estado o initialState del counter.
 
 const Counter = () => {
-    // el selector obtiene los datos del estado inicial
-    const counter = useSelector((state) => state.counter)
-    // el dispatch ejecuta o funciona de disparador de las funciones. Sin el dispatch las funciones no se ejecutan.
-    const dispatch = useDispatch();
+// obtener primero el estado.
+  const counter = useSelector((state) => state.counter) 
 
-  return (
+  const dispatch = useDispatch();
+
+
+  return(
     <div>
-        {counter}
-        <button onClick={() => dispatch(incrementCount())}> + </button>
-        <button onClick={() => dispatch(decrementCount())}> - </button>
-        <button onClick={() => dispatch(resetCount())}> reset </button>
+      {counter}
+      <button onClick={() => dispatch(incrementCount())}> + </button>
+      <button onClick={() => dispatch(decrementCount())}> - </button>
+      <button onClick={()=> dispatch(reset())}> reset </button>
     </div>
   )
 }
 
 export default Counter;
+
+
+
